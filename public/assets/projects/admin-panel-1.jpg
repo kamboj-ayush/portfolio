@@ -1,0 +1,20 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adminFullGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#373b44;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4286f4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6dd5ed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#adminFullGrad)"/>
+  <rect x="100" y="80" width="1000" height="640" fill="rgba(255,255,255,0.1)" rx="15"/>
+  <rect x="120" y="100" width="250" height="600" fill="rgba(255,255,255,0.05)" rx="10"/>
+  <rect x="390" y="100" width="690" height="280" fill="rgba(255,255,255,0.15)" rx="10"/>
+  <rect x="390" y="400" width="330" height="300" fill="rgba(255,255,255,0.1)" rx="10"/>
+  <rect x="750" y="400" width="330" height="300" fill="rgba(255,255,255,0.1)" rx="10"/>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">Admin Panel</text>
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.85)" text-anchor="middle">Usage Control & System Management</text>
+  <rect x="140" y="120" width="210" height="40" fill="rgba(255,255,255,0.2)" rx="5"/>
+  <rect x="140" y="180" width="210" height="40" fill="rgba(255,255,255,0.15)" rx="5"/>
+  <rect x="140" y="240" width="210" height="40" fill="rgba(255,255,255,0.15)" rx="5"/>
+</svg>

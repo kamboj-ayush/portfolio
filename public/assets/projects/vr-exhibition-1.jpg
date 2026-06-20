@@ -1,0 +1,18 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vrFullGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d2ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3a47d5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#928dab;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#vrFullGrad)"/>
+  <rect x="150" y="150" width="900" height="500" fill="rgba(255,255,255,0.08)" rx="25"/>
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle">Virtual 3D Exhibition</text>
+  <text x="600" y="380" font-family="Arial, sans-serif" font-size="32" fill="rgba(255,255,255,0.9)" text-anchor="middle">Immersive Gallery Experience with Three.js</text>
+  <text x="600" y="460" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">vr.artoreal.com</text>
+  <rect x="300" y="520" width="150" height="150" fill="rgba(255,255,255,0.15)" rx="20" transform="rotate(12 375 595)"/>
+  <rect x="750" y="520" width="150" height="150" fill="rgba(255,255,255,0.2)" rx="20" transform="rotate(-12 825 595)"/>
+  <circle cx="600" cy="100" r="40" fill="rgba(255,255,255,0.1)"/>
+  <path d="M 150 700 Q 600 620 1050 700" stroke="rgba(255,255,255,0.3)" stroke-width="4" fill="none"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adminGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#373b44;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4286f4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#adminGrad)"/>
+  <rect x="50" y="50" width="700" height="350" fill="rgba(255,255,255,0.1)" rx="10"/>
+  <rect x="70" y="70" width="200" height="310" fill="rgba(255,255,255,0.05)" rx="5"/>
+  <rect x="290" y="70" width="440" height="150" fill="rgba(255,255,255,0.15)" rx="5"/>
+  <rect x="290" y="240" width="210" height="140" fill="rgba(255,255,255,0.1)" rx="5"/>
+  <rect x="520" y="240" width="210" height="140" fill="rgba(255,255,255,0.1)" rx="5"/>
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">Admin Panel</text>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.8)" text-anchor="middle">Usage Control Dashboard</text>
+</svg>

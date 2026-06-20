@@ -1,0 +1,422 @@
+{
+  "personalInfo": {
+  "name": "Ayush Kamboj",
+  "role": "Flutter Developer",
+  "tagline": "Building scalable cross-platform mobile applications with Flutter",
+  "bio": "Flutter Developer with 3 years of experience delivering production-grade cross-platform iOS and Android applications across SaaS, HRMS, healthcare, and real estate domains. Experienced in Flutter, Dart, BLoC, Riverpod, Provider, GetX, Clean Architecture, Firebase, Supabase, and mobile app deployment.",
+  "email": "ayushkamboj46@gmail.com",
+  "phone": "+91 9720902460",
+  "location": "New Delhi, India",
+  "profileImage": "/profile.jpeg",
+  "resumeUrl": "/resume.pdf",
+  "yearsOfExperience": 3,
+  "currentRole": "Software Developer – Flutter",
+  "currentCompany": "Mind IT Systems",
+  "availability": "employed-open-to-opportunities"
+},
+ "socialLinks": [
+  {
+    "platform": "GitHub",
+    "url": "https://github.com/kamboj-ayush",
+    "icon": "github",
+    "username": "kamboj-ayush"
+  },
+  {
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/kambojayush/",
+    "icon": "linkedin",
+    "username": "kambojayush"
+  },
+  {
+    "platform": "LeetCode",
+    "url": "https://leetcode.com/u/Ayu5h_001/",
+    "icon": "code",
+    "username": "Ayu5h_001"
+  }
+],
+"skills": [
+  {
+    "name": "Flutter",
+    "category": "mobile",
+    "proficiency": 95
+  },
+  {
+    "name": "Dart",
+    "category": "mobile",
+    "proficiency": 95
+  },
+  {
+    "name": "Android Native",
+    "category": "mobile",
+    "proficiency": 85
+  },
+  {
+    "name": "Kotlin",
+    "category": "mobile",
+    "proficiency": 85
+  },
+  {
+    "name": "Java",
+    "category": "mobile",
+    "proficiency": 80
+  },
+  {
+    "name": "Android SDK",
+    "category": "mobile",
+    "proficiency": 85
+  },
+  {
+    "name": "Jetpack Compose",
+    "category": "mobile",
+    "proficiency": 80
+  },
+  {
+    "name": "Android Jetpack",
+    "category": "mobile",
+    "proficiency": 85
+  },
+  {
+    "name": "WorkManager",
+    "category": "mobile",
+    "proficiency": 75
+  },
+  {
+    "name": "Push Notifications",
+    "category": "mobile",
+    "proficiency": 90
+  },
+  {
+    "name": "Deep Linking",
+    "category": "mobile",
+    "proficiency": 85
+  },
+  {
+    "name": "Platform Channels",
+    "category": "mobile",
+    "proficiency": 90
+  },
+  {
+    "name": "BLoC",
+    "category": "architecture",
+    "proficiency": 95
+  },
+  {
+    "name": "Riverpod",
+    "category": "architecture",
+    "proficiency": 90
+  },
+  {
+    "name": "Provider",
+    "category": "architecture",
+    "proficiency": 95
+  },
+  {
+    "name": "GetX",
+    "category": "architecture",
+    "proficiency": 90
+  },
+  {
+    "name": "Clean Architecture",
+    "category": "architecture",
+    "proficiency": 95
+  },
+  {
+    "name": "MVVM Architecture",
+    "category": "architecture",
+    "proficiency": 85
+  },
+  {
+    "name": "Dependency Injection (Hilt)",
+    "category": "architecture",
+    "proficiency": 80
+  },
+  {
+    "name": "Firebase",
+    "category": "backend",
+    "proficiency": 90
+  },
+  {
+    "name": "Supabase",
+    "category": "backend",
+    "proficiency": 85
+  },
+  {
+    "name": "REST APIs",
+    "category": "backend",
+    "proficiency": 95
+  },
+  {
+    "name": "WebSockets",
+    "category": "backend",
+    "proficiency": 85
+  },
+  {
+    "name": "GraphQL",
+    "category": "backend",
+    "proficiency": 80
+  },
+  {
+    "name": "Retrofit",
+    "category": "backend",
+    "proficiency": 85
+  },
+  {
+    "name": "Room Database",
+    "category": "backend",
+    "proficiency": 80
+  },
+  {
+    "name": "SQLite",
+    "category": "backend",
+    "proficiency": 85
+  },
+  {
+    "name": "Git",
+    "category": "tools",
+    "proficiency": 90
+  },
+  {
+    "name": "Google Play Console",
+    "category": "tools",
+    "proficiency": 90
+  },
+  {
+    "name": "Fastlane",
+    "category": "devops",
+    "proficiency": 85
+  },
+  {
+    "name": "GitHub Actions",
+    "category": "devops",
+    "proficiency": 85
+  },
+  {
+    "name": "CI/CD",
+    "category": "devops",
+    "proficiency": 85
+  }
+],
+  "education": [
+  {
+    "id": "edu-1",
+    "institution": "Shivalik College of Engineering",
+    "degree": "B.Tech",
+    "field": "Computer Science Engineering",
+    "location": "Dehradun, Uttarakhand, India",
+    "startDate": "2019-08",
+    "endDate": "2023-06",
+    "grade": "71.6%",
+    "description": "Focused on software engineering, mobile application development, data structures, algorithms, and software architecture.",
+    "achievements": []
+  }
+],
+  "experience": [
+  {
+    "id": "exp-1",
+    "company": "Mind IT Systems",
+    "role": "Software Developer – Flutter",
+    "location": "New Delhi, India",
+    "locationType": "onsite",
+    "startDate": "2025-07",
+    "current": true,
+    "description": "Leading Flutter application development and deployment for enterprise-grade mobile solutions.",
+    "achievements": [
+      "Led end-to-end development and deployment of 5+ production Flutter apps on Play Store and App Store",
+      "Implemented BLoC and Clean Architecture for scalable and maintainable codebases",
+      "Automated CI/CD pipelines using Fastlane, GitHub Actions, and Bitrise",
+      "Integrated REST APIs with .NET, Spring Boot, and Node.js backends",
+      "Implemented Firebase Cloud Messaging (FCM) for push notifications",
+      "Mentored junior developers and enforced code review standards"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "BLoC",
+      "Clean Architecture",
+      "Firebase",
+      "Fastlane"
+    ]
+  },
+  {
+    "id": "exp-2",
+    "company": "E-Alphabits",
+    "role": "Software Engineer – Android & Flutter",
+    "location": "Ahmedabad, Gujarat, India",
+    "locationType": "onsite",
+    "startDate": "2023-09",
+    "endDate": "2025-06",
+    "current": false,
+    "description": "Developed and launched Flutter and native Android applications across multiple domains.",
+    "achievements": [
+      "Built cross-platform Flutter and native Android applications end-to-end",
+      "Implemented MVVM architecture with Provider state management",
+      "Integrated Supabase for authentication, real-time sync, and cloud storage",
+      "Implemented Razorpay payment gateway integration",
+      "Reduced crash-related issues by 30% through performance optimization and debugging"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Kotlin",
+      "Android",
+      "Getx",
+      "Provider",
+      "Supabase",
+      "Razorpay"
+    ]
+  },
+  {
+    "id": "exp-3",
+    "company": "Drish Infotech",
+    "role": "Android Developer Intern",
+    "location": "Mohali, Punjab, India",
+    "locationType": "onsite",
+    "startDate": "2023-01",
+    "endDate": "2023-06",
+    "current": false,
+    "description": "Worked on native Android development and API integrations.",
+    "achievements": [
+      "Built Android features using Kotlin",
+      "Integrated REST APIs using Retrofit",
+      "Focused on performance optimization and user experience improvements"
+    ],
+    "technologies": [
+      "Android",
+      "Kotlin",
+      "Retrofit",
+      "REST APIs"
+    ]
+  }
+],
+  "projects": [
+    {
+      "id": "proj-1",
+      "slug": "artoreal",
+      "name": "Artoreal",
+      "shortDescription": "Online art marketplace and gallery platform",
+      "fullDescription": "A comprehensive art marketplace platform enabling artists to showcase and sell their work online with advanced gallery features.",
+      "category": "Web Application",
+      "tags": ["E-commerce", "Art", "Gallery"],
+      "technologies": ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+      "featured": true,
+      "thumbnailImage": "/assets/projects/artoreal-thumb.jpg",
+      "images": ["/assets/projects/artoreal-1.jpg"],
+      "liveUrl": "https://www.artoreal.com",
+      "startDate": "2023-08",
+      "status": "completed"
+    },
+    {
+      "id": "proj-2",
+      "slug": "virtual-3d-exhibition",
+      "name": "Virtual 3D Exhibition",
+      "shortDescription": "Immersive 3D virtual exhibition experience using Three.js",
+      "fullDescription": "An immersive 3D virtual exhibition platform built with Three.js and React Three Fiber, providing realistic gallery experiences.",
+      "category": "3D Web Application",
+      "tags": ["3D", "Virtual Reality", "Three.js"],
+      "technologies": ["React.js", "Three.js", "React Three Fiber", "TypeScript"],
+      "featured": true,
+      "thumbnailImage": "/assets/projects/vr-exhibition-thumb.jpg",
+      "images": ["/assets/projects/vr-exhibition-1.jpg"],
+      "liveUrl": "https://vr.artoreal.com",
+      "startDate": "2024-01",
+      "status": "completed"
+    },
+    {
+      "id": "proj-3",
+      "slug": "admin-panel",
+      "name": "Admin Panel for Usage Control",
+      "shortDescription": "Comprehensive admin dashboard for system management",
+      "fullDescription": "An admin panel for managing user access, monitoring system usage, and controlling platform features.",
+      "category": "Dashboard",
+      "tags": ["Admin", "Dashboard", "Management"],
+      "technologies": ["React.js", "TypeScript", "Tailwind CSS"],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/admin-panel-thumb.jpg",
+      "images": ["/assets/projects/admin-panel-1.jpg"],
+      "startDate": "2024-06",
+      "status": "completed"
+    }
+  ],
+  "certifications": [],
+  "services": [],
+  "testimonials": [],
+  "achievements": [],
+  "codingProfiles": [
+  {
+    "platform": "LeetCode",
+    "username": "Ayu5h_001",
+    "url": "https://leetcode.com/u/Ayu5h_001/"
+  },
+  {
+    "platform": "GitHub",
+    "username": "kamboj-ayush",
+    "url": "https://github.com/kamboj-ayush"
+  }
+],
+  "github": {
+  "username": "kamboj-ayush",
+  "showProfile": true,
+  "showPinnedRepos": true,
+  "showStats": true,
+  "showContributions": true
+},
+  "seo": {
+  "title": "Ayush Kamboj | Flutter Developer",
+  "description": "Flutter Developer with 3+ years of experience building production-grade cross-platform mobile applications using Flutter, Dart, BLoC, Riverpod, Firebase, Supabase, and Clean Architecture.",
+  "keywords": [
+    "Flutter Developer",
+    "Mobile App Developer",
+    "Dart Developer",
+    "Android Developer",
+    "iOS Developer",
+    "BLoC",
+    "Riverpod",
+    "Firebase",
+    "Supabase",
+    "Clean Architecture"
+  ],
+  "author": "Ayush Kamboj",
+  "siteUrl": "https://ayushkamboj.dev",
+  "image": "/og-image.svg",
+  "twitterHandle": "",
+  "locale": "en_US",
+  "type": "profile"
+},
+  "analytics": {},
+  "contactForm": {
+    "enabled": true,
+    "email": "ayushkamboj46@gmail.com",
+    "web3FormsAccessKey": "d5387ac9-3797-4141-b3d4-a179f2f05afb",
+    "fields": [
+      { "name": "name", "label": "Full Name", "type": "text", "required": true, "placeholder": "Enter your full name" },
+      { "name": "email", "label": "Email Address", "type": "email", "required": true, "placeholder": "your.email@example.com" },
+      { "name": "phone", "label": "Mobile Number", "type": "tel", "required": true, "placeholder": "+91 98765 43210" },
+      { "name": "message", "label": "Your Query", "type": "textarea", "required": true, "placeholder": "How can I help you?" }
+    ],
+    "successMessage": "Thank you for contacting me! I'll get back to you soon.",
+    "errorMessage": "Oops! Something went wrong. Please try again or email me directly."
+  },
+  "theme": {
+    "defaultTheme": "system",
+    "enableThemeSwitcher": true
+  },
+  "siteConfig": {
+    "navigation": [
+      { "label": "Home", "href": "/" },
+      { "label": "Projects", "href": "/projects" },
+      { "label": "Experience", "href": "/experience" },
+      { "label": "Certifications", "href": "/certifications" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "footer": {
+      "copyright": "© 2026 Ayush Kamboj. All rights reserved.",
+      "links": []
+    },
+    "features": {
+      "showScrollProgress": true,
+      "showBackToTop": true,
+      "showCommandPalette": false,
+      "showBreadcrumbs": false
+    }
+  }
+}
