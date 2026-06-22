@@ -9,7 +9,7 @@ Your portfolio includes a fully functional contact form that sends submissions d
 
 1. Visit [https://web3forms.com](https://web3forms.com)
 2. Click "Create Access Key" or "Get Started"
-3. Enter your email: **pawantripathi648@gmail.com**
+3. Enter your email: **ayushkamboj46@gmail.com**
 4. Verify your email (check inbox/spam)
 5. Copy the Access Key provided
 
@@ -20,7 +20,7 @@ Open `data/profile.json` and find the `contactForm` section:
 ```json
 "contactForm": {
   "enabled": true,
-  "email": "pawantripathi648@gmail.com",
+  "email": "ayushkamboj46@gmail.com",
   "web3FormsAccessKey": "YOUR_WEB3FORMS_ACCESS_KEY",  // ← Replace this!
   ...
 }
@@ -33,7 +33,7 @@ Replace `YOUR_WEB3FORMS_ACCESS_KEY` with the key you received from Web3Forms.
 1. Start your development server: `npm run dev`
 2. Navigate to: http://localhost:3000/contact
 3. Fill out the form and submit
-4. Check your email: **pawantripathi648@gmail.com**
+4. Check your email: **ayushkamboj46@gmail.com**
 
 ## How It Works
 

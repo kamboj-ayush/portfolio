@@ -3,7 +3,7 @@ import { getSEOConfig, getProjects } from '@/lib/profile';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const seo = getSEOConfig();
-  const baseUrl = seo.siteUrl || 'https://pawantripathi.dev';
+  const baseUrl = seo.siteUrl || 'https://ayushkamboj.dev';
   const projects = getProjects();
 
   const staticPages = [

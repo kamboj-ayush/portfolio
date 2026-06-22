@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 const seo = getSEOConfig();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(seo.siteUrl || 'https://pawantripathi.dev'),
+  metadataBase: new URL(seo.siteUrl || 'https://ayushkamboj.dev'),
   title: {
     default: seo.title,
     template: `%s | ${seo.author}`,

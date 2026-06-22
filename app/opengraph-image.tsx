@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { getPersonalInfo } from '@/lib/profile';
 
 export const runtime = 'edge';
-export const alt = 'Pawan Tripathi - Senior Software Engineer';
+export const alt = 'Ayush Kamboj - Software Engineer';
 export const size = {
   width: 1200,
   height: 630,

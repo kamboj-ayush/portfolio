@@ -30,12 +30,12 @@
   
   <!-- Name -->
   <text x="600" y="220" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#textGradient)" text-anchor="middle">
-    Pawan Tripathi
+    Ayush Kamboj
   </text>
   
   <!-- Role -->
   <text x="600" y="290" font-family="Arial, sans-serif" font-size="36" font-weight="500" fill="#e5e7eb" text-anchor="middle">
-    Senior Software Engineer
+    Software Engineer
   </text>
   
   <!-- Company & Experience -->
@@ -45,7 +45,7 @@
   
   <!-- Email -->
   <text x="600" y="400" font-family="Arial, sans-serif" font-size="22" fill="#6b7280" text-anchor="middle">
-    <tspan fill="#6366f1">✉</tspan> pawantripathi648@gmail.com
+    <tspan fill="#6366f1">✉</tspan> ayushkamboj46@gmail.com
   </text>
   
   <!-- Tagline -->
