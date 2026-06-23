@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { Container, Section, SectionHeader, SectionTitle, SectionDescription, Button, Badge } from '@/components/ui';
 import { getProjects, isSectionEnabled } from '@/lib/profile';
 import { ANIMATION_VARIANTS } from '@/constants';
-import { Star, Code2, ExternalLink, ArrowUpRight, Eye } from 'lucide-react';
+import { Star, Code2, ExternalLink, ArrowUpRight, Eye, Smartphone } from 'lucide-react';
+import { FaGithub, FaGooglePlay, FaAppStore } from 'react-icons/fa';
 
 export function ProjectsSection() {
   const featuredProjects = getProjects({ featured: true }).slice(0, 6);
@@ -111,27 +112,56 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex gap-2 pt-2">
-                      {('githubUrl' in project && project.githubUrl) ? (
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      {/* GitHub Button */}
+                      {(project.githubLink || project.githubUrl) && (
                         <a
-                          href={project.githubUrl as string}
+                          href={(project.githubLink || project.githubUrl) as string}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border-2 border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group/btn"
+                          className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border-2 border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group/btn text-sm font-medium"
                         >
-                          <Code2 className="h-4 w-4 group-hover/btn:rotate-12 transition-transform" />
-                          <span className="text-sm font-semibold">Code</span>
+                          <FaGithub className="h-3.5 w-3.5 group-hover/btn:rotate-12 transition-transform" />
+                          <span>Code</span>
                         </a>
-                      ) : null}
+                      )}
+                      
+                      {/* Play Store Button */}
+                      {project.isLiveOnPlayStore && project.playStoreLink && (
+                        <a
+                          href={project.playStoreLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border border-green-500/50 bg-green-500/10 hover:bg-green-500/20 hover:border-green-500 transition-all duration-300 group/btn text-sm font-medium text-green-600"
+                        >
+                          <FaGooglePlay className="h-3.5 w-3.5 group-hover/btn:scale-110 transition-transform" />
+                          <span>Play</span>
+                        </a>
+                      )}
+                      
+                      {/* App Store Button */}
+                      {project.isLiveOnAppStore && project.appStoreLink && (
+                        <a
+                          href={project.appStoreLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-500 transition-all duration-300 group/btn text-sm font-medium text-blue-600"
+                        >
+                          <FaAppStore className="h-3.5 w-3.5 group-hover/btn:scale-110 transition-transform" />
+                          <span>App</span>
+                        </a>
+                      )}
+                      
+                      {/* Live Demo Button */}
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-primary to-purple-600 text-white font-semibold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-300 group/btn"
+                          className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-gradient-to-r from-primary to-purple-600 text-white font-medium hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-300 group/btn text-sm"
                         >
-                          <ExternalLink className="h-4 w-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                          <span className="text-sm">Live Demo</span>
+                          <ExternalLink className="h-3.5 w-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                          <span>Live</span>
                         </a>
                       )}
                     </div>

@@ -4,10 +4,13 @@ import {
   SkillsSection,
   ExperienceSection,
   ProjectsSection,
-  ContactSection,
 } from '@/components/sections';
+import ContactForm from '@/components/sections/contact-form';
+import { getContactFormConfig } from '@/lib/profile';
 
 export default function Home() {
+  const contactFormConfig = getContactFormConfig();
+  
   return (
     <>
       <HeroSection />
@@ -15,7 +18,7 @@ export default function Home() {
       <SkillsSection />
       <ExperienceSection />
       <ProjectsSection />
-      <ContactSection />
+      {contactFormConfig && <ContactForm config={contactFormConfig} />}
     </>
   );
 }

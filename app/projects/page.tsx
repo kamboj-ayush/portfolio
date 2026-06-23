@@ -8,6 +8,7 @@ import { Container, Badge, Button } from '@/components/ui';
 import { getProjects, getProjectCategories, getProjectTags } from '@/lib/profile';
 import { ANIMATION_VARIANTS } from '@/constants';
 import { Search, Star, Code2, ExternalLink } from 'lucide-react';
+import { FaGithub, FaGooglePlay, FaAppStore } from 'react-icons/fa';
 
 export default function ProjectsPage() {
   const allProjects = getProjects();
@@ -179,27 +180,56 @@ export default function ProjectsPage() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex gap-2 pt-2">
-                    {('githubUrl' in project && project.githubUrl) ? (
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {/* GitHub Button */}
+                    {(project.githubLink || project.githubUrl) && (
                       <a
-                        href={project.githubUrl as string}
+                        href={(project.githubLink || project.githubUrl) as string}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-accent transition-colors"
+                        className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-border hover:bg-accent transition-colors text-xs font-medium"
                       >
-                        <Code2 className="h-4 w-4" />
-                        <span className="text-sm">Code</span>
+                        <FaGithub className="h-3.5 w-3.5" />
+                        <span>Code</span>
                       </a>
-                    ) : null}
+                    )}
+                    
+                    {/* Play Store Button */}
+                    {project.isLiveOnPlayStore && project.playStoreLink && (
+                      <a
+                        href={project.playStoreLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-green-500/50 bg-green-500/10 hover:bg-green-500/20 transition-colors text-xs font-medium text-green-600"
+                      >
+                        <FaGooglePlay className="h-3.5 w-3.5" />
+                        <span>Play</span>
+                      </a>
+                    )}
+                    
+                    {/* App Store Button */}
+                    {project.isLiveOnAppStore && project.appStoreLink && (
+                      <a
+                        href={project.appStoreLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 transition-colors text-xs font-medium text-blue-600"
+                      >
+                        <FaAppStore className="h-3.5 w-3.5" />
+                        <span>App</span>
+                      </a>
+                    )}
+                    
+                    {/* Live Demo Button */}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                        className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-xs font-medium"
                       >
-                        <ExternalLink className="h-4 w-4" />
-                        <span className="text-sm">Live</span>
+                        <ExternalLink className="h-3.5 w-3.5" />
+                        <span>Live</span>
                       </a>
                     )}
                   </div>

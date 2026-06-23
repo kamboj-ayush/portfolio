@@ -302,6 +302,11 @@
       "thumbnailImage": "/assets/projects/artoreal-thumb.jpg",
       "images": ["/assets/projects/artoreal-1.jpg"],
       "liveUrl": "https://www.artoreal.com",
+      "githubLink": "",
+      "isLiveOnPlayStore": false,
+      "playStoreLink": "",
+      "isLiveOnAppStore": false,
+      "appStoreLink": "",
       "startDate": "2023-08",
       "status": "completed"
     },
@@ -318,6 +323,11 @@
       "thumbnailImage": "/assets/projects/vr-exhibition-thumb.jpg",
       "images": ["/assets/projects/vr-exhibition-1.jpg"],
       "liveUrl": "https://vr.artoreal.com",
+      "githubLink": "https://github.com/username/vr-exhibition",
+      "isLiveOnPlayStore": true,
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.example.vrexhibition",
+      "isLiveOnAppStore": true,
+      "appStoreLink": "https://apps.apple.com/app/vr-exhibition/id123456789",
       "startDate": "2024-01",
       "status": "completed"
     },
@@ -333,6 +343,11 @@
       "featured": false,
       "thumbnailImage": "/assets/projects/admin-panel-thumb.jpg",
       "images": ["/assets/projects/admin-panel-1.jpg"],
+      "githubLink": "https://github.com/username/admin-panel",
+      "isLiveOnPlayStore": false,
+      "playStoreLink": "",
+      "isLiveOnAppStore": false,
+      "appStoreLink": "",
       "startDate": "2024-06",
       "status": "completed"
     }

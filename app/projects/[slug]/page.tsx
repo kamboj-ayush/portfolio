@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Calendar, Users, CheckCircle } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaGooglePlay, FaAppStore } from 'react-icons/fa';
 import { Container } from '@/components/ui/container';
 import { Badge } from '@/components/ui/badge';
 import { getProjectBySlug, getProjects } from '@/lib/profile';
@@ -44,6 +44,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const architecture = 'architecture' in project ? project.architecture as string | undefined : undefined;
   const results = 'results' in project ? project.results as any[] | undefined : undefined;
   const githubUrl = 'githubUrl' in project ? project.githubUrl as string | undefined : undefined;
+  const githubLink = 'githubLink' in project ? project.githubLink as string | undefined : undefined;
+  const isLiveOnPlayStore = 'isLiveOnPlayStore' in project ? project.isLiveOnPlayStore as boolean | undefined : undefined;
+  const playStoreLink = 'playStoreLink' in project ? project.playStoreLink as string | undefined : undefined;
+  const isLiveOnAppStore = 'isLiveOnAppStore' in project ? project.isLiveOnAppStore as boolean | undefined : undefined;
+  const appStoreLink = 'appStoreLink' in project ? project.appStoreLink as string | undefined : undefined;
 
   return (
     <div className="py-16 sm:py-24">
@@ -101,16 +106,38 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 mt-8">
-            {githubUrl && (
+          <div className="flex flex-wrap gap-3 mt-8">
+            {(githubLink || githubUrl) && (
               <a
-                href={githubUrl}
+                href={(githubLink || githubUrl) as string}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+                className="inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border-2 border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-6"
               >
                 <FaGithub className="h-5 w-5" />
-                View Code
+                <span>Code</span>
+              </a>
+            )}
+            {isLiveOnPlayStore && playStoreLink && (
+              <a
+                href={playStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-green-500/50 bg-green-500/10 hover:bg-green-500/20 text-green-600 h-11 px-6"
+              >
+                <FaGooglePlay className="h-4 w-4" />
+                <span>Play Store</span>
+              </a>
+            )}
+            {isLiveOnAppStore && appStoreLink && (
+              <a
+                href={appStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 h-11 px-6"
+              >
+                <FaAppStore className="h-4 w-4" />
+                <span>App Store</span>
               </a>
             )}
             {project.liveUrl && (
@@ -118,10 +145,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8"
+                className="inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-6"
               >
                 <ExternalLink className="h-5 w-5" />
-                Live Demo
+                <span>Live Demo</span>
               </a>
             )}
           </div>

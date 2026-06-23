@@ -74,8 +74,13 @@ export interface Project {
   thumbnailImage: string;
   images: string[];
   githubUrl?: string;
+  githubLink?: string; // Alias for githubUrl
   liveUrl?: string;
   demoVideoUrl?: string;
+  isLiveOnPlayStore?: boolean;
+  playStoreLink?: string;
+  isLiveOnAppStore?: boolean;
+  appStoreLink?: string;
   startDate: string;
   endDate?: string;
   status: 'completed' | 'in-progress' | 'archived';
