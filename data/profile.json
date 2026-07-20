@@ -288,70 +288,210 @@
     ]
   }
 ],
-  "projects": [
-    {
-      "id": "proj-1",
-      "slug": "artoreal",
-      "name": "Artoreal",
-      "shortDescription": "Online art marketplace and gallery platform",
-      "fullDescription": "A comprehensive art marketplace platform enabling artists to showcase and sell their work online with advanced gallery features.",
-      "category": "Web Application",
-      "tags": ["E-commerce", "Art", "Gallery"],
-      "technologies": ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
-      "featured": true,
-      "thumbnailImage": "/assets/projects/artoreal-thumb.jpg",
-      "images": ["/assets/projects/artoreal-1.jpg"],
-      "liveUrl": "https://www.artoreal.com",
-      "githubLink": "",
-      "isLiveOnPlayStore": false,
-      "playStoreLink": "",
-      "isLiveOnAppStore": false,
-      "appStoreLink": "",
-      "startDate": "2023-08",
-      "status": "completed"
-    },
-    {
-      "id": "proj-2",
-      "slug": "virtual-3d-exhibition",
-      "name": "Virtual 3D Exhibition",
-      "shortDescription": "Immersive 3D virtual exhibition experience using Three.js",
-      "fullDescription": "An immersive 3D virtual exhibition platform built with Three.js and React Three Fiber, providing realistic gallery experiences.",
-      "category": "3D Web Application",
-      "tags": ["3D", "Virtual Reality", "Three.js"],
-      "technologies": ["React.js", "Three.js", "React Three Fiber", "TypeScript"],
-      "featured": true,
-      "thumbnailImage": "/assets/projects/vr-exhibition-thumb.jpg",
-      "images": ["/assets/projects/vr-exhibition-1.jpg"],
-      "liveUrl": "https://vr.artoreal.com",
-      "githubLink": "https://github.com/username/vr-exhibition",
-      "isLiveOnPlayStore": true,
-      "playStoreLink": "https://play.google.com/store/apps/details?id=com.example.vrexhibition",
-      "isLiveOnAppStore": true,
-      "appStoreLink": "https://apps.apple.com/app/vr-exhibition/id123456789",
-      "startDate": "2024-01",
-      "status": "completed"
-    },
-    {
-      "id": "proj-3",
-      "slug": "admin-panel",
-      "name": "Admin Panel for Usage Control",
-      "shortDescription": "Comprehensive admin dashboard for system management",
-      "fullDescription": "An admin panel for managing user access, monitoring system usage, and controlling platform features.",
-      "category": "Dashboard",
-      "tags": ["Admin", "Dashboard", "Management"],
-      "technologies": ["React.js", "TypeScript", "Tailwind CSS"],
-      "featured": false,
-      "thumbnailImage": "/assets/projects/admin-panel-thumb.jpg",
-      "images": ["/assets/projects/admin-panel-1.jpg"],
-      "githubLink": "https://github.com/username/admin-panel",
-      "isLiveOnPlayStore": false,
-      "playStoreLink": "",
-      "isLiveOnAppStore": false,
-      "appStoreLink": "",
-      "startDate": "2024-06",
-      "status": "completed"
-    }
+  "projects":[
+  {
+    "id": "proj-1",
+    "slug": "child-care-app",
+    "name": "Child Care App",
+    "shortDescription": "Comprehensive child healthcare and development tracking platform.",
+    "fullDescription": "A comprehensive child care application designed to help parents monitor their child's health, growth, and development. The app allows parents to book doctor appointments and consult healthcare professionals through audio calls, video calls, or chat. It also provides features such as a teeth tracker, weight tracker, home remedies, and developmental screening tests for Autism, ADHD, speech delay, and other early childhood assessments.",
+    "category": "Healthcare Mobile Application",
+    "tags": [
+      "Healthcare",
+      "Telemedicine",
+      "Child Care",
+      "Health Tracking"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Clean Architecture",
+      "GetX"
+    ],
+    "featured": false,
+    "thumbnailImage": "/assets/projects/child-care-thumb.jpg",
+    "images": [
+      "/assets/projects/child-care-1.jpg"
+    ],
+    "liveUrl": "",
+    "githubLink": "",
+    "isLiveOnPlayStore": false,
+    "playStoreLink": "",
+    "isLiveOnAppStore": false,
+    "appStoreLink": "",
+    "startDate": "2024-01",
+    "status": "completed"
+  },
+  {
+    "id": "proj-2",
+    "slug": "digi-abode",
+    "name": "Digi Abode",
+    "shortDescription": "Hotel staff and hospitality management application.",
+    "fullDescription": "Digi Abode is a hotel staff management application that streamlines hospitality operations by managing guest service requests such as food delivery, laundry, housekeeping, and other room services. Administrators can assign requests to the appropriate staff members, monitor task progress, and ensure timely completion. Staff members can view their assigned tasks, update their status, and access the history of completed work for better productivity and accountability.",
+    "category": "Hospitality Management Mobile Application",
+    "tags": [
+      "Hospitality",
+      "Hotel Management",
+      "Task Management",
+      "Staff Management"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Clean Architecture",
+      "GetX"
+    ],
+    "featured": false,
+    "thumbnailImage": "/assets/projects/digi-abode-thumb.jpg",
+    "images": [
+      "/assets/projects/digi-abode-1.jpg"
+    ],
+    "liveUrl": "",
+    "githubLink": "",
+    "isLiveOnPlayStore": false,
+    "playStoreLink": "",
+    "isLiveOnAppStore": false,
+    "appStoreLink": "",
+    "startDate": "2024-06",
+    "status": "completed"
+  },
+  {
+  "id": "proj-3",
+  "slug": "helium",
+  "name": "Helium",
+  "shortDescription": "AI-powered learning platform for NEET, JEE, and Board exam preparation.",
+  "fullDescription": "Helium is an AI-powered educational platform designed for students preparing for NEET-UG, IIT-JEE (Main & Advanced), CUET, and CBSE/State Board examinations. The app delivers personalized AI-driven study plans based on student performance, helping learners focus on weak areas and improve efficiently. It offers live and recorded classes, instant doubt resolution through chat and video, AI-powered performance analytics, extensive question banks with previous year papers, mock tests, daily practice problems, gamified learning, and offline access to study materials. The platform also includes foundation courses for Classes 6–10 and provides learning resources such as notes, flashcards, and video solutions, making it a complete study companion for competitive and board exam preparation.",
+  "category": "EdTech Mobile Application",
+  "tags": [
+    "EdTech",
+    "AI",
+    "E-Learning",
+    "NEET",
+    "JEE",
+    "Board Exams"
   ],
+  "technologies": [
+    "Flutter",
+    "Dart",
+    "BLoC",
+    "Clean Architecture"
+  ],
+  "featured": true,
+  "thumbnailImage": "/assets/projects/helium-thumb.jpg",
+  "images": [
+    "/assets/projects/helium-1.jpg"
+  ],
+  "liveUrl": "",
+  "githubLink": "",
+  "isLiveOnPlayStore": true,
+  "playStoreLink": "https://play.google.com/store/apps/details?id=com.helium.app&pcampaignid=web_share",
+  "isLiveOnAppStore": false,
+  "appStoreLink": "",
+  "startDate": "2025-01",
+  "status": "completed"
+},
+{
+  "id": "proj-4",
+  "slug": "the-sun-home-health",
+  "name": "The Sun Home Health",
+  "shortDescription": "Home healthcare management application for patients and caregivers.",
+  "fullDescription": "The Sun Home Health is a healthcare application developed for a leading home healthcare service provider in Ohio. The app streamlines home healthcare services by enabling efficient management of patients, caregivers, and healthcare staff. It helps coordinate care plans, manage client information, schedule healthcare services, and improve communication between patients and providers. The platform is designed to deliver reliable, high-quality home healthcare while supporting healthcare professionals with modern digital tools to enhance service delivery and patient care.",
+  "category": "Healthcare Mobile Application",
+  "tags": [
+    "Healthcare",
+    "Home Care",
+    "Patient Management",
+    "Caregiver",
+    "Medical Services"
+  ],
+  "technologies": [
+    "Flutter",
+    "Dart",
+    "GetX",
+    "Clean Architecture"
+  ],
+  "featured": false,
+  "thumbnailImage": "/assets/projects/the-sun-home-health-thumb.jpg",
+  "images": [
+    "/assets/projects/the-sun-home-health-1.jpg"
+  ],
+  "liveUrl": "",
+  "githubLink": "",
+  "isLiveOnPlayStore": false,
+  "playStoreLink": "",
+  "isLiveOnAppStore": false,
+  "appStoreLink": "",
+  "startDate": "2025-02",
+  "status": "completed"
+},
+{
+  "id": "proj-5",
+  "slug": "pozpos",
+  "name": "PozPos",
+  "shortDescription": "POS kiosk application for restaurant order and kitchen management.",
+  "fullDescription": "PozPos is a Point of Sale (POS) kiosk application designed to streamline restaurant operations. The application enables restaurant staff to efficiently manage customer orders from placement to fulfillment. Orders placed at the counter are instantly forwarded to the kitchen, allowing kitchen staff to prepare meals while keeping the counter updated with the order status. The system improves communication between the kitchen and front desk, reduces manual errors, and ensures faster service, making restaurant operations more organized and efficient.",
+  "category": "Restaurant Management Application",
+  "tags": [
+    "POS",
+    "Restaurant",
+    "Kiosk",
+    "Order Management",
+    "Kitchen Management"
+  ],
+  "technologies": [
+    "Android",
+    "Kotlin",
+    "MVVM",
+    "Room Database"
+  ],
+  "featured": false,
+  "thumbnailImage": "/assets/projects/pozpos-thumb.jpg",
+  "images": [
+    "/assets/projects/pozpos-1.jpg"
+  ],
+  "liveUrl": "",
+  "githubLink": "",
+  "isLiveOnPlayStore": false,
+  "playStoreLink": "",
+  "isLiveOnAppStore": false,
+  "appStoreLink": "",
+  "startDate": "2023-11",
+  "status": "completed"
+},
+{
+  "id": "proj-6",
+  "slug": "vanza-samaj",
+  "name": "Vanza Samaj",
+  "shortDescription": "Community networking application for the Vanza Samaj.",
+  "fullDescription": "Vanza Samaj is a community-focused mobile application developed to connect members of the Vanza (Vanza Darji) community across the world. The app serves as a centralized platform for sharing community news, announcements, and events while preserving the rich cultural heritage and history of the community. It enables users to connect with Vanza associations and samaj groups, explore traditional occupations, and strengthen relationships within the community. The application promotes networking, cultural awareness, and easy access to important community information through a simple and intuitive user experience.",
+  "category": "Community Mobile Application",
+  "tags": [
+    "Community",
+    "Social Network",
+    "Culture",
+    "Events",
+    "Networking"
+  ],
+  "technologies": [
+    "Android",
+    "Kotlin",
+    "MVVM"
+  ],
+  "featured": true,
+  "thumbnailImage": "/assets/projects/vanza-samaj-thumb.jpg",
+  "images": [
+    "/assets/projects/vanza-samaj-1.jpg"
+  ],
+  "liveUrl": "",
+  "githubLink": "",
+  "isLiveOnPlayStore": true,
+  "playStoreLink": "https://play.google.com/store/apps/details?id=com.vanza.samajapp&pcampaignid=web_share",
+  "isLiveOnAppStore": false,
+  "appStoreLink": "",
+  "startDate": "2023-07",
+  "status": "completed"
+}
+],
   "certifications": [],
   "services": [],
   "testimonials": [],
