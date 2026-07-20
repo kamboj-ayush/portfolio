@@ -114,17 +114,17 @@ export function ProjectsSection() {
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-2 pt-2">
                       {/* GitHub Button */}
-                      {(project.githubLink || project.githubUrl) && (
-                        <a
-                          href={(project.githubLink || project.githubUrl) as string}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border-2 border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group/btn text-sm font-medium"
-                        >
-                          <FaGithub className="h-3.5 w-3.5 group-hover/btn:rotate-12 transition-transform" />
-                          <span>Code</span>
-                        </a>
-                      )}
+                      {project.githubLink && (
+  <a
+    href={project.githubLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border-2 border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group/btn text-sm font-medium"
+  >
+    <FaGithub className="h-3.5 w-3.5 group-hover/btn:rotate-12 transition-transform" />
+    <span>Code</span>
+  </a>
+)}
                       
                       {/* Play Store Button */}
                       {project.isLiveOnPlayStore && project.playStoreLink && (

@@ -182,17 +182,17 @@ export default function ProjectsPage() {
                   {/* Links */}
                   <div className="flex flex-wrap gap-2 pt-2">
                     {/* GitHub Button */}
-                    {(project.githubLink || project.githubUrl) && (
-                      <a
-                        href={(project.githubLink || project.githubUrl) as string}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-border hover:bg-accent transition-colors text-xs font-medium"
-                      >
-                        <FaGithub className="h-3.5 w-3.5" />
-                        <span>Code</span>
-                      </a>
-                    )}
+                    {project.githubLink && (
+  <a
+    href={project.githubLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-border hover:bg-accent transition-colors text-xs font-medium"
+  >
+    <FaGithub className="h-3.5 w-3.5" />
+    <span>Code</span>
+  </a>
+)}
                     
                     {/* Play Store Button */}
                     {project.isLiveOnPlayStore && project.playStoreLink && (
