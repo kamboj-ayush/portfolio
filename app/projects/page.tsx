@@ -2,13 +2,11 @@
 
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Container, Badge, Button } from '@/components/ui';
+import { Container, Button } from '@/components/ui';
 import { getProjects, getProjectCategories, getProjectTags } from '@/lib/profile';
 import { ANIMATION_VARIANTS } from '@/constants';
-import { Search, Star, Code2, ExternalLink } from 'lucide-react';
-import { FaGithub, FaGooglePlay, FaAppStore } from 'react-icons/fa';
+import { Search } from 'lucide-react';
+import { ProjectCard } from '@/components/sections/project-card';
 
 export default function ProjectsPage() {
   const allProjects = getProjects();
@@ -21,21 +19,24 @@ export default function ProjectsPage() {
 
   const filteredProjects = useMemo(() => {
     return allProjects.filter((project) => {
-      const matchesSearch = project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase());
-      
+      const matchesSearch =
+        project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (project.highlights && project.highlights.some(h => h.toLowerCase().includes(searchQuery.toLowerCase())));
+
       const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
-      
-      const matchesTags = selectedTags.length === 0 || 
-        selectedTags.every(tag => project.tags.includes(tag));
+
+      const matchesTags =
+        selectedTags.length === 0 ||
+        selectedTags.every((tag) => project.tags.includes(tag));
 
       return matchesSearch && matchesCategory && matchesTags;
     });
   }, [allProjects, searchQuery, selectedCategory, selectedTags]);
 
   const toggleTag = (tag: string) => {
-    setSelectedTags(prev =>
-      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
 
@@ -53,7 +54,7 @@ export default function ProjectsPage() {
               All Projects
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
-              Explore my portfolio of projects spanning various technologies and domains
+              Explore my production mobile applications, architectures, and engineering highlights
             </p>
           </motion.div>
 
@@ -132,109 +133,10 @@ export default function ProjectsPage() {
           {/* Projects Grid */}
           <motion.div
             variants={ANIMATION_VARIANTS.staggerContainer}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 gap-8"
           >
-            {filteredProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                variants={ANIMATION_VARIANTS.scale}
-                className="group relative rounded-xl border border-border bg-card overflow-hidden hover:shadow-xl transition-all duration-300"
-              >
-                {/* Project Image */}
-                <div className="relative aspect-video overflow-hidden bg-muted">
-                  <Image
-                    src={project.thumbnailImage}
-                    alt={project.name}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  {project.featured && (
-                    <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-950 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                      <Star className="h-3 w-3 fill-current" />
-                      Featured
-                    </div>
-                  )}
-                </div>
-
-                {/* Project Content */}
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-bold line-clamp-1">{project.name}</h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {project.shortDescription}
-                    </p>
-                  </div>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <Badge variant="secondary" className="text-xs">
-                        +{project.technologies.length - 3}
-                      </Badge>
-                    )}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {/* GitHub Button */}
-                    {project.githubLink && (
-  <a
-    href={project.githubLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-border hover:bg-accent transition-colors text-xs font-medium"
-  >
-    <FaGithub className="h-3.5 w-3.5" />
-    <span>Code</span>
-  </a>
-)}
-                    
-                    {/* Play Store Button */}
-                    {project.isLiveOnPlayStore && project.playStoreLink && (
-                      <a
-                        href={project.playStoreLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-green-500/50 bg-green-500/10 hover:bg-green-500/20 transition-colors text-xs font-medium text-green-600"
-                      >
-                        <FaGooglePlay className="h-3.5 w-3.5" />
-                        <span>Play</span>
-                      </a>
-                    )}
-                    
-                    {/* App Store Button */}
-                    {project.isLiveOnAppStore && project.appStoreLink && (
-                      <a
-                        href={project.appStoreLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 transition-colors text-xs font-medium text-blue-600"
-                      >
-                        <FaAppStore className="h-3.5 w-3.5" />
-                        <span>App</span>
-                      </a>
-                    )}
-                    
-                    {/* Live Demo Button */}
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-xs font-medium"
-                      >
-                        <ExternalLink className="h-3.5 w-3.5" />
-                        <span>Live</span>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
+            {filteredProjects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </motion.div>
 

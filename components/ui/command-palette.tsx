@@ -53,7 +53,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
         description: project.shortDescription,
         icon: <Code className="h-4 w-4" />,
         action: () => {
-          router.push(`/projects/${project.slug}`);
+          router.push('/projects');
           onClose();
         },
         category: 'Projects',

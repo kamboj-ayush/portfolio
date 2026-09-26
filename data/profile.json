@@ -292,10 +292,14 @@
   {
     "id": "proj-1",
     "slug": "child-care-app",
-    "name": "Child Care App",
+    "name": "Genima",
     "shortDescription": "Comprehensive child healthcare and development tracking platform.",
-    "fullDescription": "A comprehensive child care application designed to help parents monitor their child's health, growth, and development. The app allows parents to book doctor appointments and consult healthcare professionals through audio calls, video calls, or chat. It also provides features such as a teeth tracker, weight tracker, home remedies, and developmental screening tests for Autism, ADHD, speech delay, and other early childhood assessments.",
     "category": "Healthcare Mobile Application",
+    "highlights": [
+      "Comprehensive child healthcare and developmental tracking platform",
+      "Doctor appointments booking with audio, video call, and chat consultations",
+      "Growth tracking and screening tests for Autism, ADHD, and early childhood assessments"
+    ],
     "tags": [
       "Healthcare",
       "Telemedicine",
@@ -310,9 +314,6 @@
     ],
     "featured": false,
     "thumbnailImage": "/assets/projects/child-care-thumb.jpg",
-    "images": [
-      "/assets/projects/child-care-1.jpg"
-    ],
     "liveUrl": "",
     "githubLink": "",
     "isLiveOnPlayStore": false,
@@ -327,8 +328,12 @@
     "slug": "digi-abode",
     "name": "Digi Abode",
     "shortDescription": "Hotel staff and hospitality management application.",
-    "fullDescription": "Digi Abode is a hotel staff management application that streamlines hospitality operations by managing guest service requests such as food delivery, laundry, housekeeping, and other room services. Administrators can assign requests to the appropriate staff members, monitor task progress, and ensure timely completion. Staff members can view their assigned tasks, update their status, and access the history of completed work for better productivity and accountability.",
     "category": "Hospitality Management Mobile Application",
+    "highlights": [
+      "Hotel staff management application streamlining hospitality operations",
+      "Task allocation for guest requests (room service, housekeeping, food delivery)",
+      "Real-time task progress monitoring, status updates, and historical work logging"
+    ],
     "tags": [
       "Hospitality",
       "Hotel Management",
@@ -343,9 +348,6 @@
     ],
     "featured": false,
     "thumbnailImage": "/assets/projects/digi-abode-thumb.jpg",
-    "images": [
-      "/assets/projects/digi-abode-1.jpg"
-    ],
     "liveUrl": "",
     "githubLink": "",
     "isLiveOnPlayStore": false,
@@ -356,141 +358,145 @@
     "status": "completed"
   },
   {
-  "id": "proj-3",
-  "slug": "helium",
-  "name": "Helium",
-  "shortDescription": "AI-powered learning platform for NEET, JEE, and Board exam preparation.",
-  "fullDescription": "Helium is an AI-powered educational platform designed for students preparing for NEET-UG, IIT-JEE (Main & Advanced), CUET, and CBSE/State Board examinations. The app delivers personalized AI-driven study plans based on student performance, helping learners focus on weak areas and improve efficiently. It offers live and recorded classes, instant doubt resolution through chat and video, AI-powered performance analytics, extensive question banks with previous year papers, mock tests, daily practice problems, gamified learning, and offline access to study materials. The platform also includes foundation courses for Classes 6–10 and provides learning resources such as notes, flashcards, and video solutions, making it a complete study companion for competitive and board exam preparation.",
-  "category": "EdTech Mobile Application",
-  "tags": [
-    "EdTech",
-    "AI",
-    "E-Learning",
-    "NEET",
-    "JEE",
-    "Board Exams"
-  ],
-  "technologies": [
-    "Flutter",
-    "Dart",
-    "BLoC",
-    "Clean Architecture"
-  ],
-  "featured": true,
-  "thumbnailImage": "/assets/projects/helium-thumb.jpg",
-  "images": [
-    "/assets/projects/helium-1.jpg"
-  ],
-  "liveUrl": "",
-  "githubLink": "",
-  "isLiveOnPlayStore": true,
-  "playStoreLink": "https://play.google.com/store/apps/details?id=com.helium.app&pcampaignid=web_share",
-  "isLiveOnAppStore": false,
-  "appStoreLink": "",
-  "startDate": "2025-01",
-  "status": "completed"
-},
-{
-  "id": "proj-4",
-  "slug": "the-sun-home-health",
-  "name": "The Sun Home Health",
-  "shortDescription": "Home healthcare management application for patients and caregivers.",
-  "fullDescription": "The Sun Home Health is a healthcare application developed for a leading home healthcare service provider in Ohio. The app streamlines home healthcare services by enabling efficient management of patients, caregivers, and healthcare staff. It helps coordinate care plans, manage client information, schedule healthcare services, and improve communication between patients and providers. The platform is designed to deliver reliable, high-quality home healthcare while supporting healthcare professionals with modern digital tools to enhance service delivery and patient care.",
-  "category": "Healthcare Mobile Application",
-  "tags": [
-    "Healthcare",
-    "Home Care",
-    "Patient Management",
-    "Caregiver",
-    "Medical Services"
-  ],
-  "technologies": [
-    "Flutter",
-    "Dart",
-    "GetX",
-    "Clean Architecture"
-  ],
-  "featured": false,
-  "thumbnailImage": "/assets/projects/the-sun-home-health-thumb.jpg",
-  "images": [
-    "/assets/projects/the-sun-home-health-1.jpg"
-  ],
-  "liveUrl": "",
-  "githubLink": "",
-  "isLiveOnPlayStore": false,
-  "playStoreLink": "",
-  "isLiveOnAppStore": false,
-  "appStoreLink": "",
-  "startDate": "2025-02",
-  "status": "completed"
-},
-{
-  "id": "proj-5",
-  "slug": "pozpos",
-  "name": "PozPos",
-  "shortDescription": "POS kiosk application for restaurant order and kitchen management.",
-  "fullDescription": "PozPos is a Point of Sale (POS) kiosk application designed to streamline restaurant operations. The application enables restaurant staff to efficiently manage customer orders from placement to fulfillment. Orders placed at the counter are instantly forwarded to the kitchen, allowing kitchen staff to prepare meals while keeping the counter updated with the order status. The system improves communication between the kitchen and front desk, reduces manual errors, and ensures faster service, making restaurant operations more organized and efficient.",
-  "category": "Restaurant Management Application",
-  "tags": [
-    "POS",
-    "Restaurant",
-    "Kiosk",
-    "Order Management",
-    "Kitchen Management"
-  ],
-  "technologies": [
-    "Android",
-    "Kotlin",
-    "MVVM",
-    "Room Database"
-  ],
-  "featured": false,
-  "thumbnailImage": "/assets/projects/pozpos-thumb.jpg",
-  "images": [
-    "/assets/projects/pozpos-1.jpg"
-  ],
-  "liveUrl": "",
-  "githubLink": "",
-  "isLiveOnPlayStore": false,
-  "playStoreLink": "",
-  "isLiveOnAppStore": false,
-  "appStoreLink": "",
-  "startDate": "2023-11",
-  "status": "completed"
-},
-{
-  "id": "proj-6",
-  "slug": "vanza-samaj",
-  "name": "Vanza Samaj",
-  "shortDescription": "Community networking application for the Vanza Samaj.",
-  "fullDescription": "Vanza Samaj is a community-focused mobile application developed to connect members of the Vanza (Vanza Darji) community across the world. The app serves as a centralized platform for sharing community news, announcements, and events while preserving the rich cultural heritage and history of the community. It enables users to connect with Vanza associations and samaj groups, explore traditional occupations, and strengthen relationships within the community. The application promotes networking, cultural awareness, and easy access to important community information through a simple and intuitive user experience.",
-  "category": "Community Mobile Application",
-  "tags": [
-    "Community",
-    "Social Network",
-    "Culture",
-    "Events",
-    "Networking"
-  ],
-  "technologies": [
-    "Android",
-    "Kotlin",
-    "MVVM"
-  ],
-  "featured": true,
-  "thumbnailImage": "/assets/projects/vanza-samaj-thumb.jpg",
-  "images": [
-    "/assets/projects/vanza-samaj-1.jpg"
-  ],
-  "liveUrl": "",
-  "githubLink": "",
-  "isLiveOnPlayStore": true,
-  "playStoreLink": "https://play.google.com/store/apps/details?id=com.vanza.samajapp&pcampaignid=web_share",
-  "isLiveOnAppStore": false,
-  "appStoreLink": "",
-  "startDate": "2023-07",
-  "status": "completed"
-}
+    "id": "proj-3",
+    "slug": "helium",
+    "name": "Helium",
+    "shortDescription": "AI-powered learning platform for NEET, JEE, and Board exam preparation.",
+    "category": "EdTech Mobile Application",
+    "highlights": [
+      "AI-powered learning platform for NEET-UG, IIT-JEE, CUET, and Board exam preparation",
+      "Personalized AI study plans with student performance analytics and weak-area targeting",
+      "Live & recorded classes, instant doubt resolution, question banks, and offline study access"
+    ],
+    "tags": [
+      "EdTech",
+      "AI",
+      "E-Learning",
+      "NEET",
+      "JEE",
+      "Board Exams"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "BLoC",
+      "Clean Architecture"
+    ],
+    "featured": true,
+    "thumbnailImage": "/assets/projects/helium-thumb.jpg",
+    "liveUrl": "",
+    "githubLink": "",
+    "isLiveOnPlayStore": true,
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.helium.app&pcampaignid=web_share",
+    "isLiveOnAppStore": false,
+    "appStoreLink": "",
+    "startDate": "2025-01",
+    "status": "completed"
+  },
+  {
+    "id": "proj-4",
+    "slug": "the-sun-home-health",
+    "name": "The Sun Home Health",
+    "shortDescription": "Home healthcare management application for patients and caregivers.",
+    "category": "Healthcare Mobile Application",
+    "highlights": [
+      "Home healthcare management platform for patients, caregivers, and medical staff",
+      "Care plan coordination, client record management, and healthcare service scheduling",
+      "Modern digital tools enhancing communication between patients and home healthcare providers"
+    ],
+    "tags": [
+      "Healthcare",
+      "Home Care",
+      "Patient Management",
+      "Caregiver",
+      "Medical Services"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "GetX",
+      "Clean Architecture"
+    ],
+    "featured": false,
+    "thumbnailImage": "/assets/projects/the-sun-home-health-thumb.jpg",
+    "liveUrl": "",
+    "githubLink": "",
+    "isLiveOnPlayStore": false,
+    "playStoreLink": "",
+    "isLiveOnAppStore": false,
+    "appStoreLink": "",
+    "startDate": "2025-02",
+    "status": "completed"
+  },
+  {
+    "id": "proj-5",
+    "slug": "pozpos",
+    "name": "PozPos",
+    "shortDescription": "POS kiosk application for restaurant order and kitchen management.",
+    "category": "Restaurant Management Application",
+    "highlights": [
+      "Point of Sale (POS) kiosk application designed for restaurant operations",
+      "Instant order dispatching from counter directly to kitchen display systems",
+      "Faster turnaround, reduced manual errors, and synchronized status tracking"
+    ],
+    "tags": [
+      "POS",
+      "Restaurant",
+      "Kiosk",
+      "Order Management",
+      "Kitchen Management"
+    ],
+    "technologies": [
+      "Android",
+      "Kotlin",
+      "MVVM",
+      "Room Database"
+    ],
+    "featured": false,
+    "thumbnailImage": "/assets/projects/pozpos-thumb.jpg",
+    "liveUrl": "",
+    "githubLink": "",
+    "isLiveOnPlayStore": false,
+    "playStoreLink": "",
+    "isLiveOnAppStore": false,
+    "appStoreLink": "",
+    "startDate": "2023-11",
+    "status": "completed"
+  },
+  {
+    "id": "proj-6",
+    "slug": "vanza-samaj",
+    "name": "Vanza Samaj",
+    "shortDescription": "Dedicated mobile platform connecting members of the Vanza (Vanza Darji) community across the world.",
+    "category": "Community Mobile Application",
+    "highlights": [
+      "Dedicated community platform connecting Vanza Darji members worldwide",
+      "Stay connected with real-time samaj activities, news, and official announcements",
+      "Directory of associations, matrimonial connections, and cultural heritage preservation"
+    ],
+    "tags": [
+      "Community",
+      "Social Network",
+      "Culture",
+      "Events",
+      "Networking"
+    ],
+    "technologies": [
+      "Android",
+      "Kotlin",
+      "MVVM"
+    ],
+    "featured": true,
+    "thumbnailImage": "/assets/projects/vanza-samaj-thumb.jpg",
+    "liveUrl": "",
+    "githubLink": "",
+    "isLiveOnPlayStore": true,
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.vanza.samajapp&pcampaignid=web_share",
+    "isLiveOnAppStore": false,
+    "appStoreLink": "",
+    "startDate": "2023-07",
+    "status": "completed"
+  }
 ],
   "certifications": [],
   "services": [],

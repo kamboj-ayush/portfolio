@@ -1,5 +1,5 @@
 import profileData from '@/data/profile.json';
-import { ProfileData } from '@/types';
+import { ProfileData, Project } from '@/types';
 
 /**
  * Get the complete profile data
@@ -40,8 +40,8 @@ export function getProjects(filter?: {
   featured?: boolean;
   category?: string;
   status?: string;
-}) {
-  let projects = profileData.projects || [];
+}): Project[] {
+  let projects = (profileData.projects || []) as unknown as Project[];
 
   if (filter?.featured !== undefined) {
     projects = projects.filter((p) => p.featured === filter.featured);

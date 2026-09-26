@@ -1,0 +1,15 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d97706;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ca8a04;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sunGrad)"/>
+  <rect x="50" y="50" width="700" height="350" fill="rgba(255,255,255,0.08)" rx="16"/>
+  <circle cx="160" cy="225" r="50" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="640" cy="225" r="50" fill="rgba(255,255,255,0.15)"/>
+  <text x="400" y="190" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="white" text-anchor="middle">The Sun Home Health</text>
+  <text x="400" y="240" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.9)" text-anchor="middle">Home Healthcare Management Platform</text>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.7)" text-anchor="middle">Flutter • Dart • GetX • Clean Architecture</text>
+</svg>

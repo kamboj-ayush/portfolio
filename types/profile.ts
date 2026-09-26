@@ -66,13 +66,14 @@ export interface Project {
   slug: string;
   name: string;
   shortDescription: string;
-  fullDescription: string;
+  fullDescription?: string;
   category: string;
+  highlights?: string[];
   tags: string[];
   technologies: string[];
   featured: boolean;
   thumbnailImage: string;
-  images: string[];
+  images?: string[];
   githubUrl?: string;
   githubLink?: string; // Alias for githubUrl
   liveUrl?: string;
