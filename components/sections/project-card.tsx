@@ -32,15 +32,15 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           src={project.thumbnailImage}
           alt={project.name}
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 1024px) 100vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 
       {/* Card Content Body */}
-      <div className="flex-1 flex flex-col p-6 sm:p-7 space-y-3">
+      <div className="flex-1 flex flex-col p-5 sm:p-6 lg:p-5 xl:p-6 space-y-3">
         {/* Title */}
-        <h3 className="text-2xl sm:text-3xl font-bold text-foreground dark:text-white tracking-tight">
+        <h3 className="text-xl sm:text-2xl font-bold text-foreground dark:text-white tracking-tight">
           {project.name}
         </h3>
 
@@ -48,16 +48,16 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         <div className="h-px w-full bg-purple-200 dark:bg-purple-500/25 my-1" />
 
         {/* Subtitle / Category */}
-        <p className="text-lg sm:text-xl font-semibold text-purple-600 dark:text-purple-400">
+        <p className="text-base sm:text-lg font-semibold text-purple-600 dark:text-purple-400">
           {project.category}
         </p>
 
         {/* Tech Stack Pills */}
-        <div className="flex flex-wrap gap-2 pt-1 pb-1">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1 pb-1">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3.5 py-1 rounded-full text-xs sm:text-sm font-medium border border-cyan-600/30 bg-cyan-50 text-cyan-800 dark:border-cyan-500/40 dark:bg-cyan-950/20 dark:text-cyan-300"
+              className="px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-cyan-600/30 bg-cyan-50 text-cyan-800 dark:border-cyan-500/40 dark:bg-cyan-950/20 dark:text-cyan-300"
             >
               {tech}
             </span>
@@ -65,12 +65,12 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         </div>
 
         {/* Bullet Points / Long Description Highlights */}
-        <div className="space-y-3 pt-2">
+        <div className="space-y-2.5 pt-1">
           {(project.highlights && project.highlights.length > 0
             ? project.highlights
             : [project.shortDescription]
           ).map((point, i) => (
-            <div key={i} className="flex items-start gap-2.5 text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+            <div key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
               <span className="text-purple-600 dark:text-purple-400 font-bold text-sm leading-none mt-1 select-none flex-shrink-0">
                 ▸
               </span>
@@ -81,13 +81,13 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
         {/* Action Buttons */}
         {hasLinks && (
-          <div className="flex flex-wrap items-center gap-3 pt-4 mt-auto">
+          <div className="flex flex-wrap items-center gap-2.5 pt-3 mt-auto">
             {project.isLiveOnPlayStore && project.playStoreLink && (
               <a
                 href={project.playStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-semibold transition-all text-sm sm:text-base min-w-[120px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
+                className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
               >
                 Android
               </a>
@@ -98,7 +98,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 href={project.appStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-semibold transition-all text-sm sm:text-base min-w-[120px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
+                className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
               >
                 iOS
               </a>
@@ -109,7 +109,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-semibold transition-all text-sm sm:text-base min-w-[120px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
+                className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
               >
                 Code
               </a>
@@ -120,7 +120,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-semibold transition-all text-sm sm:text-base min-w-[120px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
+                className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
               >
                 Live Demo
               </a>

@@ -288,11 +288,345 @@
     ]
   }
 ],
-  "projects":[
-  {
-    "id": "proj-1",
-    "slug": "child-care-app",
-    "name": "Genima",
+  "projects": [
+    {
+      "id": "proj-7",
+      "slug": "interne",
+      "name": "Interne",
+      "shortDescription": "Multi-tenant HRMS SaaS platform for employee onboarding, attendance tracking, leave management, and work outside office.",
+      "category": "Enterprise HRMS Mobile Application",
+      "highlights": [
+        "Multi-tenant enterprise HRMS SaaS platform managing employee lifecycles with strict tenant data isolation and configurable branding",
+        "Streamlined mobile experience for real-time attendance tracking, check-ins, leave requests, and work outside office (WOO)",
+        "Role-based access control, work calendars, monthly attendance deviation analytics, and centralized profile management"
+      ],
+      "tags": [
+        "HRMS",
+        "Multi-Tenant",
+        "SaaS",
+        "Attendance Tracking",
+        "Employee Management",
+        "Enterprise"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Clean Architecture",
+        "REST APIs"
+      ],
+      "featured": true,
+      "thumbnailImage": "/assets/projects/interne-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": true,
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.minditsystems.interne&pcampaignid=web_share",
+      "isLiveOnAppStore": true,
+      "appStoreLink": "https://apps.apple.com/in/app/interne/id6747033560",
+      "startDate": "2025-01",
+      "status": "completed"
+    },
+    {
+      "id": "proj-8",
+      "slug": "reunited",
+      "name": "Reunited",
+      "shortDescription": "Digital property brokerage and management platform for listings, broker verification, and deal lifecycle workflows.",
+      "category": "Real Estate & Property Management Mobile Application",
+      "highlights": [
+        "Comprehensive property brokerage platform connecting real estate brokers and administrators for standard and exclusive listings",
+        "Structured workflows for listing creation, digital document verification, transaction processing, and deal dispute resolution",
+        "Interactive command center dashboard featuring conversion metrics, commission tracking, deal sources, and buyer matching"
+      ],
+      "tags": [
+        "Real Estate",
+        "Property Management",
+        "Brokerage",
+        "Deal Tracking",
+        "Listings",
+        "Analytics"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Clean Architecture",
+        "REST APIs"
+      ],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/reunited-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": true,
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.reunited.app&pcampaignid=web_share",
+      "isLiveOnAppStore": false,
+      "appStoreLink": "",
+      "startDate": "2025-02",
+      "status": "completed"
+    },
+    {
+      "id": "proj-9",
+      "slug": "vriddhi",
+      "name": "Vriddhi",
+      "shortDescription": "Enterprise NBFC loan management platform for multi-role loan origination, maker-checker approvals, and field recovery.",
+      "category": "FinTech & NBFC Mobile Application",
+      "highlights": [
+        "Enterprise loan lifecycle management platform for NBFCs with multi-role access (Super Admin, Maker, Checker, Field Officer)",
+        "End-to-end loan processing featuring automated EMI calculations, eligibility checks, and a secure Maker-Checker approval pipeline",
+        "Field collection and recovery module with real-time payment updates, automated EMI reminders, and integrated tele-calling logs"
+      ],
+      "tags": [
+        "FinTech",
+        "NBFC",
+        "Loan Management",
+        "Collections",
+        "Recovery",
+        "Enterprise"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Clean Architecture",
+        "REST APIs"
+      ],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/vriddhi-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": false,
+      "playStoreLink": "",
+      "isLiveOnAppStore": false,
+      "appStoreLink": "",
+      "startDate": "2025-01",
+      "status": "completed"
+    },
+    {
+      "id": "proj-10",
+      "slug": "shaad-online",
+      "name": "Shaad Online",
+      "shortDescription": "International mobile airtime top-up and data recharge platform for Afghanistan, Turkey, and Nepal.",
+      "category": "FinTech & Telecom Mobile Application",
+      "highlights": [
+        "International mobile recharge platform supporting major telecom networks across Afghanistan (Etisalat, Roshan, Afghan Wireless AWCC, ATOMA, and Salaam), Turkey, and Nepal",
+        "Biometric login with secure multi-currency payment gateway integrations including PayPal and Stripe",
+        "Seamless airtime top-ups, automated order tracking, top-up history, and in-app customer support ticketing"
+      ],
+      "tags": [
+        "FinTech",
+        "Mobile Top-Up",
+        "Telecom",
+        "Payments",
+        "PayPal",
+        "Stripe",
+        "Airtime Recharge"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Clean Architecture",
+        "REST APIs",
+        "Stripe",
+        "PayPal"
+      ],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/shaad-online-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": true,
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.shaad.customer&pcampaignid=web_share",
+      "isLiveOnAppStore": true,
+      "appStoreLink": "https://apps.apple.com/in/app/shaad-online/id6496685466",
+      "startDate": "2024-09",
+      "status": "completed"
+    },
+    {
+      "id": "proj-11",
+      "slug": "shaad-business",
+      "name": "Shaad Business",
+      "shortDescription": "B2B retailer platform enabling merchants to manage customer airtime recharges, billing, credit, and order tracking.",
+      "category": "FinTech & B2B Retail Mobile Application",
+      "highlights": [
+        "Dedicated B2B platform empowering Shaad Online retail partners to manage customer recharge services, pricing, and distributor requests",
+        "Comprehensive operational hub for real-time forex rates, financial summaries, earned commissions, and live balance monitoring",
+        "Robust credit request management, detailed billing statements, multi-carrier order tracking, and in-app support ticketing"
+      ],
+      "tags": [
+        "FinTech",
+        "B2B",
+        "Retailer Platform",
+        "Airtime Recharge",
+        "Billing",
+        "Order Management",
+        "Forex"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Clean Architecture",
+        "REST APIs"
+      ],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/shaad-business-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": true,
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.shaad.retailer&pcampaignid=web_share",
+      "isLiveOnAppStore": true,
+      "appStoreLink": "https://apps.apple.com/us/app/shaad-business/id6480330967",
+      "startDate": "2024-10",
+      "status": "completed"
+    },
+    {
+      "id": "proj-12",
+      "slug": "pds-partner",
+      "name": "PDS Partner",
+      "shortDescription": "UK prescription logistics and delivery partner app for couriers with route planning, barcode scanning, and proof of delivery.",
+      "category": "Logistics & Healthcare Delivery Mobile Application",
+      "highlights": [
+        "UK prescription delivery logistics platform empowering couriers to plan, navigate, and execute daily delivery workloads",
+        "Integrated barcode scanning, customer signature capture, and photo verification for secure proof of delivery",
+        "Turn-by-turn route optimization, real-time stop navigation, delivery progress summaries, and special customer instructions handling"
+      ],
+      "tags": [
+        "Logistics",
+        "Healthcare",
+        "Route Planning",
+        "Delivery Partner",
+        "Barcode Scanning",
+        "Proof of Delivery",
+        "Navigation"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Clean Architecture",
+        "REST APIs",
+        "Google Maps"
+      ],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/pds-partner-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": true,
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.pds.partner&pcampaignid=web_share",
+      "isLiveOnAppStore": true,
+      "appStoreLink": "https://apps.apple.com/us/app/pds-partner/id6740516189",
+      "startDate": "2024-11",
+      "status": "completed"
+    },
+    {
+      "id": "proj-13",
+      "slug": "pds-delivery",
+      "name": "PDS Delivery",
+      "shortDescription": "Customer-facing UK prescription delivery tracking app with real-time ETA, delivery instructions, and rescheduling.",
+      "category": "Logistics & Healthcare Mobile Application",
+      "highlights": [
+        "Customer mobile application providing real-time UK prescription delivery tracking with a 1-hour delivery window",
+        "Personalized delivery preferences, custom courier drop-off instructions, and flexible delivery rescheduling",
+        "Family member prescription tracking, in-app delivery ratings and feedback, and end-to-end encrypted GDPR-compliant data security"
+      ],
+      "tags": [
+        "Healthcare",
+        "Logistics",
+        "Order Tracking",
+        "Prescription Delivery",
+        "Real-Time Tracking",
+        "GDPR Compliant"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Clean Architecture",
+        "REST APIs",
+        "Google Maps"
+      ],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/pds-delivery-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": false,
+      "playStoreLink": "",
+      "isLiveOnAppStore": false,
+      "appStoreLink": "",
+      "startDate": "2024-11",
+      "status": "completed"
+    },
+    {
+      "id": "proj-14",
+      "slug": "workeazy",
+      "name": "WorkEazy",
+      "shortDescription": "Collaborative project management and task tracking mobile application with role-based access and Kanban boards.",
+      "category": "Productivity & Project Management Mobile Application",
+      "highlights": [
+        "Streamlined project management and task tracking application designed to enhance productivity and team collaboration",
+        "Granular three-tier user roles and administrative controls for member provisioning, permission management, and project ownership",
+        "Interactive Kanban boards, sprint task tracking, real-time status updates (On Time, Delayed), and workload visibility"
+      ],
+      "tags": [
+        "Productivity",
+        "Project Management",
+        "Task Tracking",
+        "Kanban",
+        "Admin Control",
+        "Collaboration",
+        "Enterprise"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Clean Architecture",
+        "REST APIs"
+      ],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/workeazy-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": true,
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.workeazy.workeazy&pcampaignid=web_share",
+      "isLiveOnAppStore": true,
+      "appStoreLink": "https://apps.apple.com/in/app/workeazy/id6550906973?platform=mac",
+      "startDate": "2024-07",
+      "status": "completed"
+    },
+    {
+      "id": "proj-15",
+      "slug": "keyfob-digital-key",
+      "name": "KeyFob / Digital Key",
+      "shortDescription": "IoT and BLE mobile application for pairing, configuring, and managing smart physical keyfob hardware devices.",
+      "category": "IoT & Hardware Integration Mobile Application",
+      "highlights": [
+        "Flutter-based BLE mobile solution enabling seamless pairing, configuration, and management of physical keyfob hardware devices",
+        "Short-range wireless communication to control smart appliances, access-control systems, safe lockers, and home automation",
+        "Secure receiver hardware communication protocol with biometric authentication and compact keychain hardware integration"
+      ],
+      "tags": [
+        "IoT",
+        "BLE",
+        "Bluetooth",
+        "Digital Key",
+        "Smart Devices",
+        "Hardware Integration",
+        "Access Control"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Bluetooth Low Energy (BLE)",
+        "Clean Architecture",
+        "IoT Protocols"
+      ],
+      "featured": false,
+      "thumbnailImage": "/assets/projects/keyfob-digital-key-thumb.jpg",
+      "liveUrl": "",
+      "githubLink": "",
+      "isLiveOnPlayStore": false,
+      "playStoreLink": "",
+      "isLiveOnAppStore": false,
+      "appStoreLink": "",
+      "startDate": "2024-06",
+      "status": "completed"
+    },
+    {
+      "id": "proj-1",
+      "slug": "child-care-app",
+      "name": "Genima",
     "shortDescription": "Comprehensive child healthcare and development tracking platform.",
     "category": "Healthcare Mobile Application",
     "highlights": [

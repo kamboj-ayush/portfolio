@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Container, Button } from '@/components/ui';
-import { getProjects, getProjectCategories, getProjectTags } from '@/lib/profile';
+import { getProjects, getProjectCategories } from '@/lib/profile';
 import { ANIMATION_VARIANTS } from '@/constants';
 import { Search } from 'lucide-react';
 import { ProjectCard } from '@/components/sections/project-card';
@@ -11,11 +11,9 @@ import { ProjectCard } from '@/components/sections/project-card';
 export default function ProjectsPage() {
   const allProjects = getProjects();
   const categories = getProjectCategories();
-  const allTags = getProjectTags();
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   const filteredProjects = useMemo(() => {
     return allProjects.filter((project) => {
@@ -26,19 +24,9 @@ export default function ProjectsPage() {
 
       const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
 
-      const matchesTags =
-        selectedTags.length === 0 ||
-        selectedTags.every((tag) => project.tags.includes(tag));
-
-      return matchesSearch && matchesCategory && matchesTags;
+      return matchesSearch && matchesCategory;
     });
-  }, [allProjects, searchQuery, selectedCategory, selectedTags]);
-
-  const toggleTag = (tag: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
-  };
+  }, [allProjects, searchQuery, selectedCategory]);
 
   return (
     <div className="py-16 sm:py-24">
@@ -73,9 +61,9 @@ export default function ProjectsPage() {
           </motion.div>
 
           {/* Filters */}
-          <motion.div variants={ANIMATION_VARIANTS.slideUp} className="mb-12 space-y-6">
+          <motion.div variants={ANIMATION_VARIANTS.slideUp} className="mb-12">
             {/* Categories */}
-            <div className="space-y-2">
+            <div className="space-y-3">
               <h3 className="text-sm font-semibold">Categories</h3>
               <div className="flex flex-wrap gap-2">
                 <button
@@ -103,26 +91,6 @@ export default function ProjectsPage() {
                 ))}
               </div>
             </div>
-
-            {/* Tags */}
-            <div className="space-y-2">
-              <h3 className="text-sm font-semibold">Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {allTags.map((tag) => (
-                  <button
-                    key={tag}
-                    onClick={() => toggleTag(tag)}
-                    className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                      selectedTags.includes(tag)
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                    }`}
-                  >
-                    {tag}
-                  </button>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Results Count */}
@@ -133,7 +101,7 @@ export default function ProjectsPage() {
           {/* Projects Grid */}
           <motion.div
             variants={ANIMATION_VARIANTS.staggerContainer}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {filteredProjects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
@@ -153,7 +121,6 @@ export default function ProjectsPage() {
                 onClick={() => {
                   setSearchQuery('');
                   setSelectedCategory('all');
-                  setSelectedTags([]);
                 }}
                 variant="outline"
                 className="mt-4"

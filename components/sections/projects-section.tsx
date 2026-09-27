@@ -34,7 +34,7 @@ export function ProjectsSection() {
 
           <motion.div
             variants={ANIMATION_VARIANTS.staggerContainer}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {featuredProjects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
