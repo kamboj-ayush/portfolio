@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 import ContactForm from '@/components/sections/contact-form';
 import { getContactFormConfig, getPersonalInfo, getSocialLinks } from '@/lib/profile';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -22,6 +23,9 @@ export default function ContactPage() {
         return <FaLinkedin className="h-6 w-6" />;
       case 'twitter':
         return <FaTwitter className="h-6 w-6" />;
+      case 'leetcode':
+      case 'code':
+        return <SiLeetcode className="h-6 w-6" />;
       default:
         return null;
     }

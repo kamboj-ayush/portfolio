@@ -3,8 +3,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Globe, Mail, ExternalLink, Code, BookOpen, Download, ArrowRight, Sparkles } from 'lucide-react';
+import { Globe, Mail, ExternalLink, Code, BookOpen, Download, ArrowRight, Sparkles, MapPin, Briefcase } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaInstagram, FaYoutube, FaDev, FaMedium, FaStackOverflow } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 import { getPersonalInfo, getSocialLinks } from '@/lib/profile';
@@ -75,8 +76,8 @@ export function HeroSection() {
             {/* Badge */}
             <motion.div variants={ANIMATION_VARIANTS.slideUp}>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium">
-                <Sparkles className="h-4 w-4 text-primary" />
-                {personalInfo.availability === 'available' ? 'Available for opportunities' : 'Currently working'}
+                <Briefcase className="h-4 w-4 text-primary" />
+                {personalInfo.availability === 'open-to-work' ? 'Open to work' : personalInfo.availability === 'available' ? 'Available for opportunities' : 'Open to work'}
               </span>
             </motion.div>
 
@@ -144,6 +145,8 @@ export function HeroSection() {
                     'dev': FaDev,
                     'medium': FaMedium,
                     'stackoverflow': FaStackOverflow,
+                    'leetcode': SiLeetcode,
+                    'code': SiLeetcode,
                     'email': Mail,
                     'website': Globe,
                   };
@@ -178,40 +181,54 @@ export function HeroSection() {
             {/* Enhanced Stats Cards */}
             <motion.div
               variants={ANIMATION_VARIANTS.slideUp}
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8"
+              className="grid grid-cols-3 gap-2.5 sm:gap-4 pt-8"
             >
-              <div className="relative group">
+              <div className="relative group h-full flex flex-col">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                <div className="relative space-y-2 p-6 rounded-2xl border border-border bg-background/80 backdrop-blur-sm hover:border-primary/50 transition-all duration-300">
-                  <p className="text-4xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">{personalInfo.yearsOfExperience}+</p>
-                  <p className="text-sm text-muted-foreground font-medium">Years Experience</p>
+                <div className="relative h-full flex flex-col justify-between p-3.5 sm:p-5 lg:p-6 rounded-2xl border border-border bg-background/80 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 min-h-[115px] sm:min-h-[135px] overflow-hidden">
+                  <div className="h-9 sm:h-11 flex items-center">
+                    <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent leading-none">
+                      {personalInfo.yearsOfExperience}+
+                    </p>
+                  </div>
+                  <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-snug">
+                    Years Experience
+                  </p>
                 </div>
               </div>
               
               {personalInfo.currentCompany && (
-                <div className="relative group">
+                <div className="relative group h-full flex flex-col">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                  <div className="relative space-y-2 p-6 rounded-2xl border border-border bg-background/80 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
-                    <p className="text-4xl font-bold">✓</p>
-                    <p className="text-sm text-muted-foreground font-medium">
+                  <div className="relative h-full flex flex-col justify-between p-3.5 sm:p-5 lg:p-6 rounded-2xl border border-border bg-background/80 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 min-h-[115px] sm:min-h-[135px] overflow-hidden">
+                    <div className="h-9 sm:h-11 flex items-center">
+                      <p className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-none text-foreground">
+                        ✓
+                      </p>
+                    </div>
+                    <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-snug" title={`@ ${personalInfo.currentCompany}`}>
                       @ {personalInfo.currentCompany}
                     </p>
                   </div>
                 </div>
               )}
               
-              <div className="relative group">
+              <div className="relative group h-full flex flex-col">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                <div className="relative space-y-2 p-6 rounded-2xl border border-border bg-background/80 backdrop-blur-sm hover:border-green-500/50 transition-all duration-300">
-                  <div className="flex items-center gap-2">
+                <div className="relative h-full flex flex-col justify-between p-3.5 sm:p-5 lg:p-6 rounded-2xl border border-border bg-background/80 backdrop-blur-sm hover:border-green-500/50 transition-all duration-300 min-h-[115px] sm:min-h-[135px] overflow-hidden">
+                  <div className="h-9 sm:h-11 flex items-center gap-1.5 sm:gap-2 min-w-0">
                     <motion.div 
-                      className="h-3 w-3 rounded-full bg-green-500"
+                      className="h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full bg-green-500 shrink-0"
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 2, repeat: Infinity }}
                     />
-                    <p className="text-lg font-bold text-green-500">Available</p>
+                    <p className="text-sm sm:text-base lg:text-lg font-bold text-green-500 leading-none truncate">
+                      Available
+                    </p>
                   </div>
-                  <p className="text-sm text-muted-foreground font-medium">For new projects</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-snug">
+                    For new projects
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -270,8 +287,8 @@ export function HeroSection() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
               >
-                <p className="text-sm font-semibold whitespace-nowrap">
-                  <span className="text-primary">🚀</span> {personalInfo.location}
+                <p className="text-sm font-semibold whitespace-nowrap flex items-center gap-1.5">
+                  <MapPin className="h-4 w-4 text-primary shrink-0" /> {personalInfo.location}
                 </p>
               </motion.div>
             </div>

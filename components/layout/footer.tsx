@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Globe, Mail, ExternalLink, Code, BookOpen } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaInstagram, FaYoutube, FaDev, FaMedium, FaStackOverflow } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 import { Container } from '@/components/ui/container';
 import { getPersonalInfo, getSocialLinks, getFilteredNavigation, getSiteConfig } from '@/lib/profile';
 
@@ -57,6 +58,8 @@ export function Footer() {
                       'dev': FaDev,
                       'medium': FaMedium,
                       'stackoverflow': FaStackOverflow,
+                      'leetcode': SiLeetcode,
+                      'code': SiLeetcode,
                       'email': Mail,
                       'website': Globe,
                     };
