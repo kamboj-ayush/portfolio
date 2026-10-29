@@ -61,73 +61,8 @@
       "proficiency": 80
     },
     {
-      "name": "Android SDK",
+      "name": "iOS (Swift)",
       "category": "mobile",
-      "proficiency": 85
-    },
-    {
-      "name": "Jetpack Compose",
-      "category": "mobile",
-      "proficiency": 80
-    },
-    {
-      "name": "Android Jetpack",
-      "category": "mobile",
-      "proficiency": 85
-    },
-    {
-      "name": "WorkManager",
-      "category": "mobile",
-      "proficiency": 75
-    },
-    {
-      "name": "Push Notifications",
-      "category": "mobile",
-      "proficiency": 90
-    },
-    {
-      "name": "Deep Linking",
-      "category": "mobile",
-      "proficiency": 85
-    },
-    {
-      "name": "Platform Channels",
-      "category": "mobile",
-      "proficiency": 90
-    },
-    {
-      "name": "BLoC",
-      "category": "architecture",
-      "proficiency": 95
-    },
-    {
-      "name": "Riverpod",
-      "category": "architecture",
-      "proficiency": 90
-    },
-    {
-      "name": "Provider",
-      "category": "architecture",
-      "proficiency": 95
-    },
-    {
-      "name": "GetX",
-      "category": "architecture",
-      "proficiency": 90
-    },
-    {
-      "name": "Clean Architecture",
-      "category": "architecture",
-      "proficiency": 95
-    },
-    {
-      "name": "MVVM Architecture",
-      "category": "architecture",
-      "proficiency": 85
-    },
-    {
-      "name": "Dependency Injection (Hilt)",
-      "category": "architecture",
       "proficiency": 80
     },
     {
@@ -146,22 +81,12 @@
       "proficiency": 95
     },
     {
-      "name": "WebSockets",
-      "category": "backend",
-      "proficiency": 85
-    },
-    {
       "name": "GraphQL",
       "category": "backend",
       "proficiency": 80
     },
     {
-      "name": "Retrofit",
-      "category": "backend",
-      "proficiency": 85
-    },
-    {
-      "name": "Room Database",
+      "name": "PostgreSQL",
       "category": "backend",
       "proficiency": 80
     },
@@ -172,13 +97,33 @@
     },
     {
       "name": "Git",
-      "category": "tools",
+      "category": "devops",
+      "proficiency": 90
+    },
+    {
+      "name": "GitHub",
+      "category": "devops",
       "proficiency": 90
     },
     {
       "name": "Google Play Console",
-      "category": "tools",
+      "category": "devops",
       "proficiency": 90
+    },
+    {
+      "name": "App Store Connect",
+      "category": "devops",
+      "proficiency": 85
+    },
+    {
+      "name": "Postman",
+      "category": "devops",
+      "proficiency": 85
+    },
+    {
+      "name": "Codemagic",
+      "category": "devops",
+      "proficiency": 85
     },
     {
       "name": "Fastlane",
@@ -186,14 +131,9 @@
       "proficiency": 85
     },
     {
-      "name": "GitHub Actions",
+      "name": "Android Studio",
       "category": "devops",
-      "proficiency": 85
-    },
-    {
-      "name": "CI/CD",
-      "category": "devops",
-      "proficiency": 85
+      "proficiency": 90
     }
   ],
   "education": [
@@ -541,10 +481,10 @@
       "thumbnailImage": "/assets/projects/pds-delivery-thumb.jpg",
       "liveUrl": "",
       "githubLink": "",
-      "isLiveOnPlayStore": false,
-      "playStoreLink": "",
-      "isLiveOnAppStore": false,
-      "appStoreLink": "",
+      "isLiveOnPlayStore": true,
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.pds.delivery&pcampaignid=web_share",
+      "isLiveOnAppStore": true,
+      "appStoreLink": "https://apps.apple.com/us/app/pds-delivery/id6740554446",
       "startDate": "2024-11",
       "status": "completed"
     },
@@ -963,6 +903,10 @@
       {
         "label": "Home",
         "href": "/"
+      },
+      {
+        "label": "Skills",
+        "href": "/skills"
       },
       {
         "label": "Projects",

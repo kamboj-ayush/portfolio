@@ -2,31 +2,29 @@
 
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Container, Button } from '@/components/ui';
-import { getProjects, getProjectCategories } from '@/lib/profile';
+import { Container } from '@/components/ui';
+import { getProjects } from '@/lib/profile';
 import { ANIMATION_VARIANTS } from '@/constants';
 import { Search } from 'lucide-react';
 import { ProjectCard } from '@/components/sections/project-card';
 
 export default function ProjectsPage() {
   const allProjects = getProjects();
-  const categories = getProjectCategories();
-
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const filteredProjects = useMemo(() => {
+    if (!searchQuery.trim()) return allProjects;
+    const q = searchQuery.toLowerCase();
     return allProjects.filter((project) => {
-      const matchesSearch =
-        project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (project.highlights && project.highlights.some(h => h.toLowerCase().includes(searchQuery.toLowerCase())));
-
-      const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
-
-      return matchesSearch && matchesCategory;
+      return (
+        project.name.toLowerCase().includes(q) ||
+        project.shortDescription.toLowerCase().includes(q) ||
+        project.category.toLowerCase().includes(q) ||
+        project.technologies.some(t => t.toLowerCase().includes(q)) ||
+        (project.highlights && project.highlights.some(h => h.toLowerCase().includes(q)))
+      );
     });
-  }, [allProjects, searchQuery, selectedCategory]);
+  }, [allProjects, searchQuery]);
 
   return (
     <div className="py-16 sm:py-24">
@@ -37,7 +35,7 @@ export default function ProjectsPage() {
           variants={ANIMATION_VARIANTS.staggerContainer}
         >
           {/* Header */}
-          <motion.div variants={ANIMATION_VARIANTS.slideUp} className="mb-12">
+          <motion.div variants={ANIMATION_VARIANTS.slideUp} className="mb-10">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-4">
               All Projects
             </h1>
@@ -52,44 +50,11 @@ export default function ProjectsPage() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Search projects..."
+                placeholder="Search projects by name, tech stack, or keyword..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full h-12 pl-10 pr-4 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+                className="w-full h-12 pl-10 pr-4 rounded-xl border border-input bg-card/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/50 text-foreground text-sm"
               />
-            </div>
-          </motion.div>
-
-          {/* Filters */}
-          <motion.div variants={ANIMATION_VARIANTS.slideUp} className="mb-12">
-            {/* Categories */}
-            <div className="space-y-3">
-              <h3 className="text-sm font-semibold">Categories</h3>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => setSelectedCategory('all')}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedCategory === 'all'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                  }`}
-                >
-                  All
-                </button>
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
             </div>
           </motion.div>
 
@@ -108,25 +73,21 @@ export default function ProjectsPage() {
             ))}
           </motion.div>
 
-          {/* No Results */}
+          {/* Empty State */}
           {filteredProjects.length === 0 && (
             <motion.div
-              variants={ANIMATION_VARIANTS.slideUp}
-              className="text-center py-12"
+              variants={ANIMATION_VARIANTS.fadeIn}
+              className="text-center py-16"
             >
-              <p className="text-lg text-muted-foreground">
-                No projects found matching your criteria.
+              <p className="text-lg text-muted-foreground mb-4">
+                No projects found matching "{searchQuery}"
               </p>
-              <Button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                }}
-                variant="outline"
-                className="mt-4"
+              <button
+                onClick={() => setSearchQuery('')}
+                className="px-5 py-2.5 rounded-xl font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all text-sm cursor-pointer"
               >
-                Clear Filters
-              </Button>
+                Clear Search
+              </button>
             </motion.div>
           )}
         </motion.div>

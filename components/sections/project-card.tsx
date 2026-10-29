@@ -87,9 +87,16 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 href={project.playStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
+                className="inline-block transition-transform duration-200 hover:scale-105 active:scale-95 rounded-lg overflow-hidden shadow-sm hover:shadow-md"
+                aria-label={`Get ${project.name} on Google Play`}
               >
-                Android
+                <Image
+                  src="/assets/projects/google-play-badge-logo.svg"
+                  alt="Get it on Google Play"
+                  width={135}
+                  height={40}
+                  className="h-9 sm:h-10 w-auto object-contain block"
+                />
               </a>
             )}
 
@@ -98,9 +105,16 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 href={project.appStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
+                className="inline-block transition-transform duration-200 hover:scale-105 active:scale-95 rounded-lg overflow-hidden shadow-sm hover:shadow-md"
+                aria-label={`Download ${project.name} on the App Store`}
               >
-                iOS
+                <Image
+                  src="/assets/projects/app_store_logo.svg"
+                  alt="Download on the App Store"
+                  width={135}
+                  height={40}
+                  className="h-9 sm:h-10 w-auto object-contain block"
+                />
               </a>
             )}
 
@@ -109,7 +123,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
+                className="inline-flex items-center justify-center h-9 sm:h-10 px-4 sm:px-5 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20 hover:scale-105 active:scale-95"
               >
                 Code
               </a>
@@ -120,7 +134,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20"
+                className="inline-flex items-center justify-center h-9 sm:h-10 px-4 sm:px-5 rounded-xl font-semibold transition-all text-xs sm:text-sm min-w-[95px] text-center bg-purple-700 hover:bg-purple-800 text-white shadow-sm hover:shadow-md hover:shadow-purple-700/20 dark:bg-gradient-to-b dark:from-[#241544] dark:to-[#140b2b] dark:border dark:border-purple-500/40 dark:hover:border-purple-400 dark:text-white dark:shadow-md dark:hover:shadow-purple-500/20 hover:scale-105 active:scale-95"
               >
                 Live Demo
               </a>

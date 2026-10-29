@@ -166,6 +166,7 @@ export function getFilteredNavigation() {
   
   // Map navigation hrefs to their corresponding data sections
   const sectionMap: { [key: string]: keyof ProfileData } = {
+    '/skills': 'skills',
     '/projects': 'projects',
     '/experience': 'experience',
     '/certifications': 'certifications',
